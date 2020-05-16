@@ -19,9 +19,7 @@ if (isset($_POST["days"])) {
         header('Location:dashboard.php');
     }
     $form = '
-  <div class="col-md-4 ">
-      <img src="passports/' . $img . '" alt="passport" style="width: 100%;120px">
-</div>
+
 <div class="col-md-8 mb-5">
     <div class="card">
         <div class="card-header text-center text-capitalize"><b>' . $_POST["day"] . '</b></div>
@@ -157,26 +155,31 @@ if (!empty($_SESSION["success"])) {
 
 }
 ?>
-            <form action="dashboard.php" method="post">
-                <select name="day" id="day" class="form-control">
-                    <option value="">Select a day</option>
-                    <option value="day1">Day 1</option>
-                    <option value="day2">Day 2</option>
-                    <option value="day3">Day 3</option>
-                    <option value="day4">Day 4</option>
-                    <option value="day5">Day 5</option>
-                    <option value="day6">Day 6</option>
-                    <option value="day7">Day 7</option>
-                    <input type="submit" name="days" id="day" class="btn btn-sm btn-secondary mt-1" value="Go">
-                </select>
-            </form>
         </div>
         <div class="row justify-content-center mt-4 ">
+            <div class="col-md-4 ">
+                <form action="dashboard.php" method="post">
+                    <select name="day" id="day" class="form-control">
+                        <option value="">Select a day</option>
+                        <option value="day1">Day 1</option>
+                        <option value="day2">Day 2</option>
+                        <option value="day3">Day 3</option>
+                        <option value="day4">Day 4</option>
+                        <option value="day5">Day 5</option>
+                        <option value="day6">Day 6</option>
+                        <option value="day7">Day 7</option>
+                        <input type="submit" name="days" id="day" class="btn btn-sm btn-secondary mt-1" value="Go">
+                    </select>
+                </form>
 
+                <img src="passports/<?php echo $img; ?>" class="mt-3" alt="passport" style="width:100%; height:170px">
+            </div>
             <?php if (!empty($form)) {
     echo $form;
 } ?>
         </div>
+
+
     </div>
 </body>
 

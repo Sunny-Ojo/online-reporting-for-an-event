@@ -2,7 +2,7 @@
 session_start();
 $servername = "localhost";
 $password = '';
-$dbname = 'onlinereporting';
+$dbname = 'dtce';
 $username = 'root';
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

@@ -22,7 +22,7 @@ if (isset($_POST["days"])) {
     $day = $_POST["day"];
     $servername = "localhost";
     $password = '';
-    $dbname = 'onlinereporting';
+    $dbname = 'dtce';
     $username = 'root';
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

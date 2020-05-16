@@ -4,7 +4,7 @@ if (isset($_POST["submit"])) {
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "onlinereporting";
+    $dbname = "dtce";
     $errors = [];
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);

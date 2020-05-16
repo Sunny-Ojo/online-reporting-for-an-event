@@ -3,7 +3,7 @@ session_start();
 if (isset($_POST["submit"])) {
     $servername = "localhost";
     $password = '';
-    $dbname = 'onlinereporting';
+    $dbname = 'dtce';
     $username = 'root';
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -51,5 +51,5 @@ if (isset($_POST["submit"])) {
         echo 'connection failed' . $e->getMessage();
     }
 } else {
-    header('Location:dashboard.php');
+    header('Location:login.php');
 }
