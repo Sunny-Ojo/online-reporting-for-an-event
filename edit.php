@@ -17,7 +17,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] == 'true') {
 if (isset($_POST["days"])) {
     if ($_POST["day"] == '') {
         $_SESSION["error"] = 'Please select a valid day';
-        header('Location:dashboard.php');
+        header('Location:edit.php');
     }
     $day = $_POST["day"];
     $servername = "localhost";
@@ -107,7 +107,7 @@ if (isset($_POST["days"])) {
                           <div class="form-group">
                               <label for="pdf">Upload Pdf or doc file</label>
                               <input type="file" name="pdf" id="pdf"  class="form-control" required>
-                              <span class="text-sm text-info">Please note that the first pdf is saved already, kindly upload another one if you wish to or ignore.</span>
+                              <span class="text-sm text-info">Please note that since the report has been edited, the file format of the report must be updated too. so kindly upload the new report file.</span>
                           </div>
                           <div class="form-group">
                               <input type="submit" name="submit" value="submit" class="btn btn-primary btn-block">

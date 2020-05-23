@@ -145,14 +145,12 @@ if (isset($_POST["days"])) {
         <div class="alert alert-dismissable">
             <?php if (!empty($_SESSION["error"])) {
     echo '<div class="alert alert-danger">' . $_SESSION["error"] . '</div>';
-    $_SESSION["error"] = '';
-
+    unset($_SESSION['error']);
 }
 if (!empty($_SESSION["success"])) {
     echo '<div class="alert alert-success">' . $_SESSION["success"] . '</div>';
 
-    $_SESSION["success"] = '';
-
+    unset($_SESSION['success']);
 }
 ?>
         </div>
@@ -172,7 +170,8 @@ if (!empty($_SESSION["success"])) {
                     </select>
                 </form>
 
-                <img src="passports/<?php echo $img; ?>" class="mt-3" alt="passport" style="width:100%; height:170px">
+                <img src="passports/<?php echo $img; ?>" class="mt-3 mb-sm-3" alt="passport"
+                    style="width:100%; height:170px">
             </div>
             <?php if (!empty($form)) {
     echo $form;
