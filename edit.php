@@ -137,7 +137,7 @@ if (isset($_POST["days"])) {
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
 
             <a class="navbar-brand" href="dashboard.php">
@@ -204,6 +204,7 @@ if (!empty($_SESSION["success"])) {
     echo $form;
 } ?>
         </div>
+        <?php include 'footer.html'; ?>
     </div>
 </body>
 

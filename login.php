@@ -109,6 +109,8 @@ if (!empty($_SESSION["loginfailed"])) {
             </div>
         </div>
     </div>
+    <?php include 'footer.html'; ?>
+
     <!-- </div> -->
 
     <div id="dropDownSelect1"></div>

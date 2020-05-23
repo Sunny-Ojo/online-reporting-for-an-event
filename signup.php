@@ -132,6 +132,8 @@ foreach ($get as $department) {
                 </form>
             </div>
         </div>
+        <?php include 'footer.html'; ?>
+
     </div>
 
 
